@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="reviews">
+        <div class="arrow1 arrows">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="reviewstuff">
+            <p class="review"></p>
+            <div class="bottomreview">
+                <div class="stars2">
+                    <div><i class="far fa-star rstar1"></i></div>
+                    <div><i class="far fa-star rstar2"></i></div>
+                    <div><i class="far fa-star rstar3"></i></div>
+                    <div><i class="far fa-star rstar4"></i></div>
+                    <div><i class="far fa-star rstar5"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="arrow2 arrows">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+    </div>
+    <div class="errorcontainer">
+        <i class="fas fa-exclamation-circle exc"></i>
+        <div class="error">Your review must be legible! Try again!</div>
+    </div>
+    <div class="input-container">
+        <div class="thank-you-container">
+            <div class="thank-you">Thank you for your review!</div>
+            <i class="fas fa-kiss-wink-heart"></i>
+        </div>
+        <div class="input">
+            <div class="inputbox">
+                <div class="form-group">
+                    <textarea type="text" class="reviewinp" placeholder="Write a review" formControlName="review" id="review" (change)="getReview($event)"></textarea>
+                </div>
+            </div>
+            <form>
+                <div class="rating form-group">
+                    <input type='radio' hidden name='rate' id='rating_opt5' data-idx='0'>
+                    <label for='rating_opt5'><span>one of the best!</span></label>
+
+                    <input type='radio' hidden name='rate' id='rating_opt4' data-idx='1'>
+                    <label for='rating_opt4'><span>amazing</span></label>
+
+                    <input type='radio' hidden name='rate' id='rating_opt3' data-idx='2'>
+                    <label for='rating_opt3'><span>interesting...</span></label>
+
+                    <input type='radio' hidden name='rate' id='rating_opt2' data-idx='3'>
+                    <label for='rating_opt2'><span>worth something</span></label>
+
+                    <input type='radio' hidden name='rate' id='rating_opt1' data-idx='4'>
+                    <label for='rating_opt1'><span>don't waste your time</span></label>
+                </div>
+            </form>
+            <div class="submitbtn">
+                <button class="submit" (click)="sendReview()">Submit Review</button>
+            </div>
+        </div>
+    </div>
+</div>
+<app-testimonials></app-testimonials>

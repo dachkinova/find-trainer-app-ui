@@ -1,0 +1,214 @@
+<!-- Page Title -->
+<div class="inner-banner">
+    <div class="container">
+        <div class="inner-title text-center">
+            <h3>Trainer Details</h3>
+            <ul>
+                <li>
+                    <a routerLink="/">
+                        Home
+                    </a>
+                </li>
+                <li>Trainer Details</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Trainer Details -->
+<div class="candidate-details-area pt-100 pb-sm-45">
+    <div class="container">
+        <div class="row" style="justify-content: center">
+            <div class="col-lg-3 col-md-12">
+                <div class="candidate-details-sidebar">
+                    <div class="profile">
+                        <img src="assets/images/candidates/candidate7.jpg" class="main-image" alt="candidates-image">
+                        <div class="title">
+                            <h3>{{this.currentTrainer.userId.firstName}} {{this.currentTrainer.userId.lastName}}</h3>
+                        </div>
+                        <p>Sport trainer</p>
+                        <div class="rating">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        <ul class="social-icon">
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <i class="ri-facebook-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <i class="ri-instagram-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/" target="_blank">
+                                    <i class="ri-twitter-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/" target="_blank">
+                                    <i class="ri-linkedin-fill"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <h3>Contact Info</h3>
+                        <ul>
+                            <li>
+                                <span>Gender</span>
+                                {{this.currentTrainer.gender}}
+                            </li>
+                            <li>
+                                <span>Location</span>
+                                <a href="https://www.google.bg/maps/place/Sofia/@42.6953468,23.1838624,11z/data=!3m1!4b1!4m6!3m5!1s0x40aa8682cb317bf5:0x400a01269bf5e60!8m2!3d42.6977082!4d23.3218675!16zL20vMGZ0ang?hl=en&authuser=0"
+                                   target="_blank">{{currentTrainer.city}}</a>
+                            </li>
+                            <li>
+                                <span>Email</span>
+                                <a href="mailto:hello@henry.com">{{this.currentTrainer.userId.email}}</a>
+                            </li>
+                            <li>
+                                <span>Phone</span>
+                                <a href="">{{this.currentTrainer.telephone}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="candidate-details-desc">
+                    <h4>About</h4>
+                    <div [innerHTML]="this.currentTrainer.about | htmldecoder"></div>
+                    <hr>
+                    <h4>Photos</h4>
+                    <div class="row" style="justify-content: center">
+                        <div class="col-lg-4 col-sm-4 col-md-4">
+                            <div class="image">
+                                <img src="assets/images/blog/blog-img1.jpg" alt="blog-image">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-4 col-md-4">
+                            <div class="image">
+                                <img src="assets/images/blog/blog-img2.jpg" alt="blog-image">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-4 col-md-4">
+                            <div class="image">
+                                <img src="assets/images/blog/blog-img3.jpg" alt="blog-image">
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h3>Experience:</h3>
+                    <p>{{this.currentTrainer.experience}}</p>
+                    <hr>
+                    <h3>Category</h3>
+                    <ul class="candidate-skills">
+                        <li>{{this.currentTrainer.category}}</li>
+                    </ul>
+                    <hr>
+                    <h3>Type of training</h3>
+                    <ul class="candidate-skills">
+                        <li>{{this.currentTrainer.typeOfTraining}}</li>
+                    </ul>
+                    <hr>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-12">
+                <div class="other-candidates-list">
+                    <h3>Other Trainers</h3>
+                    <ul class="candidates-list">
+                        <li>
+                            <img src="assets/images/candidates/candidate1.jpg" alt="candidate-image">
+                            <h4>
+                                <a routerLink="/candidate-details">
+                                    Liam Noah
+                                </a>
+                            </h4>
+                            <p>Developer</p>
+                            <div class="rating">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="assets/images/candidates/candidate2.jpg" alt="candidate-image">
+                            <h4>
+                                <a routerLink="/candidate-details">
+                                    Olivia Emma
+                                </a>
+                            </h4>
+                            <p>Designer</p>
+                            <div class="rating">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-line"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="assets/images/candidates/candidate3.jpg" alt="candidate-image">
+                            <h4>
+                                <a routerLink="/candidate-details">
+                                    Charlotte Amelia
+                                </a>
+                            </h4>
+                            <p>Copywriter</p>
+                            <div class="rating">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="assets/images/candidates/candidate4.jpg" alt="candidate-image">
+                            <h4>
+                                <a routerLink="/candidate-details">
+                                    Oliver Elijah
+                                </a>
+                            </h4>
+                            <p>SEO & Marketing</p>
+                            <div class="rating">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-fill"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="assets/images/candidates/candidate5.jpg" alt="candidate-image">
+                            <h4>
+                                <a routerLink="/candidate-details">
+                                    William James
+                                </a>
+                            </h4>
+                            <p>Translator</p>
+                            <div class="rating">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-write-a-review></app-write-a-review>
+
